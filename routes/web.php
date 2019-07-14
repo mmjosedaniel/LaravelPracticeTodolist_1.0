@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+
+Route::get('/', 'TodolistController@index');
+Route::post('/', 'TodolistController@store');
+Route::delete('/{id}/delete', 'TodolistController@softDelete');
